@@ -11,20 +11,20 @@
     <div class="container">
         <div class="row">
 
-            @if(count($categories) > 1)
-                @foreach($categories as $category)
+            @if(count($products) > 1)
+                @foreach($products as $product)
 
                     <div class="col-lg-4 category mb-4">
                         <div class="card category__card">
-                            <a href="{{ route('products', $category->id) }}" title="{{ $category->name }}">
+                            <a href="#" title="{{ $product->name }}">
                                 <div class="category__image">
-                                    <img src="{{ asset('img/'.$category->image)}}" class="img-fluid" alt="{{ $category->name }}">
+                                    <img src="{{ asset('img/'.$product->image)}}" class="img-fluid" alt="{{ $product->name }}">
                                 </div>
                             </a>
                             <div class="card-body p-3">
                                 <h2 class="category__name list-name mb-0">
-                                    <a href="{{ route('products', $category->id) }}" title="{{ $category->name }}">
-                                        {{ $category->name }}
+                                    <a href="#" title="{{ $product->name }}">
+                                        {{ $product->name }}
                                     </a>
                                 </h2>
                             </div>

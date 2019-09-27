@@ -3,7 +3,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Product extends Model
 {
     protected $fillable = [
         'name',
@@ -13,8 +13,8 @@ class Category extends Model
         'description',
     ];
 
-    public function products()
+    public function categories()
     {
-        return $this->belongsToMany('App\Models\Categories');
+        return $this->belongsToMany('App\Models\Category');
     }
 }
