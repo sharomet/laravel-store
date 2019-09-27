@@ -1,0 +1,10 @@
+/* Category List / Product List */
+.list-name {
+  font-size: $list-name-size;
+  a {
+    color: $list-name-color;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

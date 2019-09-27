@@ -14,8 +14,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
-        return view('categories.index')->with('categories', $categories);
+        return view('categories.categories', [
+            'categories' => Category::all()->where('public', 1)
+        ]);
     }
 
     /**
