@@ -13,7 +13,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view('categories.categories', [
+        return view('categories.index', [
             'categories' => Category::all()->where('public', 1)
         ]);
     }
@@ -47,7 +47,9 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('categories.show', [
+            'category' => Category::find($id)
+        ]);
     }
 
     /**

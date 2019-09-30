@@ -8,9 +8,14 @@ Route::get('/categories', [
     'uses' => 'CategoryController@index',
     'as' => 'categories'
 ]);
-Route::get('/products/{id}', [
-    'uses' => 'ProductController@index',
-    'as' => 'products'
+Route::get('/category/{id}', [
+    'uses' => 'CategoryController@show',
+    'as' => 'category'
+]);
+
+Route::get('/product/{id}', [
+    'uses' => 'ProductController@show',
+    'as' => 'product'
 ]);
 
 Auth::routes();

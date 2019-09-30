@@ -13,8 +13,21 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('products.products', [
+        /*return view('products.index', [
             'products' => Product::get()
+        ]);*/
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        return view('products.show', [
+            'product' => Product::find($id)
         ]);
     }
 }
